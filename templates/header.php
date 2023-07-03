@@ -4,12 +4,13 @@
 
   //$_SESSION['name'] = 'mario';
 
-  //if($_SERVER['QUERY_STRING'] == 'noname'){
+  if($_SERVER['QUERY_STRING'] == 'noname'){
     //unset($_SESSION['name']);
-   // session_unset();
-  //}
+   session_unset();
+  }
 
-  $name = $_SESSION['name'];
+  // null coalesce
+  $name = $_SESSION['name'] ?? 'Guest';
 
 ?>
 
