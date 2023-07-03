@@ -2,6 +2,9 @@
 
 if(isset($_POST['submit'])){
 
+    //cookie for gender
+	setcookie('gender', $_POST['gender'], time() + 86400);
+
     session_start();
 
     $_SESSION['name'] = $_POST['name'];
@@ -24,6 +27,10 @@ if(isset($_POST['submit'])){
 		<input type="text" name="name">
 		<input type="submit" name="submit" value="submit">
 	</form>
+    <select name="gender">
+			<option value="male">male</option>
+			<option value="female">female</option>
+		</select>
 
 </body>
 </html>
